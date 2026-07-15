@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-import time, random
+import time, random, json
 
 ######## TYPES ########
 type Product = dict["title": str, "price": float, "discount": int]
@@ -90,3 +90,6 @@ time.sleep(1) # Wait for JS to load
 products = fetch_products(driver) # Fetch products from the Amazon url page
 
 driver.quit() # Exit driver
+
+with open("amazonDeals.json", "w") as f:
+    json.dump(products, f, indent=4) # Save products to a JSON file
