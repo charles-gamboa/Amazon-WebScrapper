@@ -1,2 +1,2 @@
 # Amazon-WebScrapper
-Personal project that scrapes the amazon website
+Personal project that scrapes deals from the amazon website
